@@ -23,6 +23,6 @@ public interface CategoryMapper {
     @Delete("delete from category where id =#{id}")
     void delete(Long id);
     //根据类型查询
-    @Select("select * from category where type= #{type}")
+    @Select("select * from category where status=1 and type= #{type}")
     List<Category> getByType(Integer type);
 }
