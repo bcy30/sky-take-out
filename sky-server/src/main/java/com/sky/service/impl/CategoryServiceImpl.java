@@ -62,4 +62,13 @@ public class CategoryServiceImpl implements CategoryService {
 
         categoryMapper.update(category);
     }
+
+    //启用禁用分类
+    @Override
+    public void startOrStop(Integer status, Long id) {
+        Category category =new Category();
+        category.setStatus(status);
+        category.setId(id);
+        categoryMapper.update(category);
+    }
 }

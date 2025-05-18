@@ -13,6 +13,6 @@ public interface CategoryMapper {
 
     //分页查询分类
     Page<Category> pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
-    //  根据id查询分类
+    //修改分类
     void update(Category category);
 }
