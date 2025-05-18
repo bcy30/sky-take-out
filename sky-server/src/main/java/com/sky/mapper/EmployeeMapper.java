@@ -26,4 +26,7 @@ public interface EmployeeMapper {
 
     //分页查询
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    //根据id动态修改员工状态
+    void update(Employee employee);
 }
