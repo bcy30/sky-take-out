@@ -22,7 +22,7 @@
     </select>
 
 
-<!--     修改分类-->
+<!--  修改分类-->
     <update id="update">
         update category
         <set>
