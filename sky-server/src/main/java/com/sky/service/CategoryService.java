@@ -10,4 +10,6 @@ public interface CategoryService {
 
     //分类分页查询
     PageResult pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
+    //修改分类
+    void update(CategoryDTO categoryDTO);
 }
