@@ -71,4 +71,10 @@ public class CategoryServiceImpl implements CategoryService {
         category.setId(id);
         categoryMapper.update(category);
     }
+
+    //删除分类
+    @Override
+    public void delete(Long id) {
+        categoryMapper.delete(id);
+    }
 }
