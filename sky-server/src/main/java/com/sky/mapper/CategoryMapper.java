@@ -5,7 +5,10 @@ import com.sky.dto.CategoryPageQueryDTO;
 import com.sky.entity.Category;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+
+import java.util.List;
 
 @Mapper
 public interface CategoryMapper {
@@ -19,4 +22,7 @@ public interface CategoryMapper {
     //删除分类
     @Delete("delete from category where id =#{id}")
     void delete(Long id);
+    //根据类型查询
+    @Select("select * from category where type= #{type}")
+    List<Category> getByType(Integer type);
 }
